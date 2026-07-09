@@ -1,16 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Mi Portafolio de Datos</title>
+    <meta charset="UTF-8">
+    <title>Portafolio de Datos - David González</title>
     <style>
-        body { margin: 0; padding: 20px; font-family: sans-serif; }
-        .container { width: 100%; height: 800px; }
+        /* Estilos generales de la página */
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; padding: 0; 
+            background-color: #f4f4f9; /* Color de fondo gris claro */
+            color: #333; /* Color de texto base */
+        }
+
+        /* Encabezado */
+        header { 
+            background: #003366; /* Azul oscuro profesional */
+            color: white; 
+            padding: 2rem; 
+            text-align: center; 
+        }
+
+        /* Contenedor principal para centrar contenido */
+        .main-container { 
+            width: 90%; 
+            max-width: 1000px; 
+            margin: 20px auto; 
+        }
+
+        /* Contenedor del reporte para mantener proporción 16:9 */
+        .report-wrapper { 
+            width: 100%; 
+            aspect-ratio: 16 / 9; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Sombra elegante */
+            border-radius: 8px; 
+            overflow: hidden; /* Oculta bordes sobrantes */
+            margin-bottom: 30px;
+        }
+
+        /* Asegura que el iframe llene el contenedor */
+        iframe { width: 100%; height: 100%; border: none; }
+
+        /* Estilo para la sección de hallazgos (insights) */
+        .insights {
+            background-color: #ffffff;
+            padding: 25px;
+            border-left: 5px solid #003366; /* Barra lateral decorativa */
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        footer { text-align: center; margin-top: 50px; color: #777; font-size: 0.9em; }
     </style>
 </head>
 <body>
-    <h1>Proyecto: Análisis de Presupuesto</h1>
-    <div class="container">
-        <iframe width="100%" height="100%" src="https://app.powerbi.com/view?r=eyJrIjoiZDdmNzgwMjYtNzQ4My00NzM3LThiNmUtYWFkYzcxMDczZjk0IiwidCI6IjVmMjgyOTEwLTE3NmYtNDU5ZC1hYjdkLWI3NDRhYTZlZmMwNyIsImMiOjR9" frameborder="0" allowFullScreen="true"></iframe>
+
+    <header>
+        <h1>Proyecto: Análisis de Presupuesto (PEF)</h1>
+        <p>Dashboard interactivo desarrollado con Power BI y Python</p>
+    </header>
+
+    <div class="main-container">
+        <div class="report-wrapper">
+            <iframe src="https://app.powerbi.com/view?r=eyJrIjoiZDdmNzgwMjYtNzQ4My00NzM3LThiNmUtYWFkYzcxMDczZjk0IiwidCI6IjVmMjgyOTEwLTE3NmYtNDU5ZC1hYjdkLWI3NDRhYTZlZmMwNyIsImMiOjR9" allowFullScreen="true"></iframe>
+        </div>
+
+        <section class="insights">
+            <h2>Hallazgos principales (Insights)</h2>
+            <p>En este análisis se han detectado los siguientes puntos clave:</p>
+            <ul>
+                <li><strong>Gasto centralizado:</strong> Se observa que Ciudad de México concentra el mayor volumen de gasto.</li>
+                <li><strong>Variabilidad presupuestaria:</strong> Existe una disparidad significativa entre estados del norte y sur.</li>
+                <li><strong>Recomendación:</strong> Optimizar la asignación de recursos en regiones con baja ejecución presupuestaria.</li>
+            </ul>
+        </section>
     </div>
+
+    <footer>
+        <p>Desarrollado por David González Martínez | Científico de Datos</p>
+    </footer>
+
 </body>
 </html>
