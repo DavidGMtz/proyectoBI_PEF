@@ -2,81 +2,212 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Portafolio de Datos - David González</title>
+
     <style>
-        /* Estilos generales de la página */
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            margin: 0; padding: 0; 
-            background-color: #f4f4f9; /* Color de fondo gris claro */
-            color: #333; /* Color de texto base */
+        * {
+            box-sizing: border-box;
         }
 
-        /* Encabezado */
-        header { 
-            background: #003366; /* Azul oscuro profesional */
-            color: white; 
-            padding: 2rem; 
-            text-align: center; 
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            color: #333333;
         }
 
-        /* Contenedor principal para centrar contenido */
-        .main-container { 
-            width: 90%; 
-            max-width: 1000px; 
-            margin: 20px auto; 
+        header {
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            color: #ffffff;
+            background: #003366;
         }
 
-        /* Contenedor del reporte para mantener proporción 16:9 */
-        .report-wrapper { 
-            width: 100%; 
-            aspect-ratio: 16 / 9; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Sombra elegante */
-            border-radius: 8px; 
-            overflow: hidden; /* Oculta bordes sobrantes */
-            margin-bottom: 30px;
+        header h1 {
+            margin: 0 0 0.6rem 0;
+            font-size: 2rem;
         }
 
-        /* Asegura que el iframe llene el contenedor */
-        iframe { width: 100%; height: 100%; border: none; }
+        header p {
+            margin: 0;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
 
-        /* Estilo para la sección de hallazgos (insights) */
-        .insights {
+        .main-container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 30px auto;
+        }
+
+        .project-description {
+            margin-bottom: 24px;
+            padding: 22px 25px;
             background-color: #ffffff;
-            padding: 25px;
-            border-left: 5px solid #003366; /* Barra lateral decorativa */
-            border-radius: 0 8px 8px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
         }
 
-        footer { text-align: center; margin-top: 50px; color: #777; font-size: 0.9em; }
+        .project-description h2 {
+            margin-top: 0;
+            color: #003366;
+        }
+
+        .project-description p {
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+
+        .report-wrapper {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            margin-bottom: 30px;
+            overflow: hidden;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
+        }
+
+        .report-wrapper iframe {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .insights {
+            padding: 25px;
+            background-color: #ffffff;
+            border-left: 5px solid #003366;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .insights h2 {
+            margin-top: 0;
+            color: #003366;
+        }
+
+        .insights p {
+            line-height: 1.6;
+        }
+
+        .insights ul {
+            margin-bottom: 0;
+            padding-left: 22px;
+        }
+
+        .insights li {
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 25px 15px;
+            text-align: center;
+            color: #777777;
+            font-size: 0.9rem;
+            background-color: #ffffff;
+            border-top: 1px solid #dddddd;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.6rem;
+            }
+
+            .main-container {
+                width: 94%;
+            }
+
+            .project-description,
+            .insights {
+                padding: 18px;
+            }
+
+            .report-wrapper {
+                aspect-ratio: 4 / 3;
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <header>
-        <h1>Proyecto: Análisis de Presupuesto (PEF)</h1>
-        <p>Dashboard interactivo desarrollado con Power BI y Python</p>
+        <h1>Proyecto: Análisis del Presupuesto de Egresos de la Federación</h1>
+        <p>Reporte interactivo desarrollado en Power BI</p>
     </header>
 
-    <div class="main-container">
-        <div class="report-wrapper">
-            <iframe src="<iframe title="PEF21" width="600" height="636" src="https://app.powerbi.com/view?r=eyJrIjoiM2I0ODQ1MTctM2M2MS00MDFjLWFjYTUtODQ0YzY0ODVjZjkzIiwidCI6IjVmMjgyOTEwLTE3NmYtNDU5ZC1hYjdkLWI3NDRhYTZlZmMwNyIsImMiOjR9" frameborder="0" allowFullScreen="true"></iframe>" allowFullScreen="true"></iframe>
-        </div>
+    <main class="main-container">
+
+        <section class="project-description">
+            <h2>Descripción del proyecto</h2>
+
+            <p>
+                Reporte de Business Intelligence diseñado para analizar la
+                concentración, destino, administración y ejecución del gasto.
+                Permite comparar entidades, identificar responsables principales
+                y detectar diferencias en el avance presupuestario.
+            </p>
+        </section>
+
+        <section class="report-wrapper">
+            <iframe
+                title="Reporte PEF 2026"
+                src="https://app.powerbi.com/view?r=eyJrIjoiM2I0ODQ1MTctM2M2MS00MDFjLWFjYTUtODQ0YzY0ODVjZjkzIiwidCI6IjVmMjgyOTEwLTE3NmYtNDU5ZC1hYjdkLWI3NDRhYTZlZmMwNyIsImMiOjR9"
+                allowfullscreen>
+            </iframe>
+        </section>
 
         <section class="insights">
-            <h2>Hallazgos principales (Insights)</h2>
-            <p>En este análisis se han detectado los siguientes puntos clave:</p>
+            <h2>Preguntas que responde el análisis</h2>
+
+            <p>
+                El reporte organiza la información presupuestaria a partir de
+                preguntas clave para facilitar su interpretación:
+            </p>
+
             <ul>
-                <li><strong>Gasto centralizado:</strong></li>
-                <li><strong>Variabilidad presupuestaria:</strong></li>
-                <li><strong>Recomendación:</strong> </li>
+                <li>
+                    <strong>¿Dónde se concentra el gasto?</strong>
+                    Permite comparar la distribución territorial del presupuesto.
+                </li>
+
+                <li>
+                    <strong>¿En qué se gasta?</strong>
+                    Identifica los grupos funcionales, funciones y subfunciones
+                    con mayor asignación.
+                </li>
+
+                <li>
+                    <strong>¿Quién administra los recursos?</strong>
+                    Muestra los ramos y unidades responsables con mayor participación.
+                </li>
+
+                <li>
+                    <strong>¿Cómo se financia?</strong>
+                    Presenta la composición del monto aprobado por fuente de financiamiento.
+                </li>
+
+                <li>
+                    <strong>¿Dónde existe mayor rezago?</strong>
+                    Facilita detectar entidades y funciones con menor avance presupuestario.
+                </li>
             </ul>
         </section>
-    </div>
+
+    </main>
 
     <footer>
-        <p>Desarrollado por David González Martínez | Científico de Datos</p>
+        <p>
+            Desarrollado por David González Martínez |
+            Analista de Datos y Business Intelligence
+        </p>
     </footer>
 
 </body>
