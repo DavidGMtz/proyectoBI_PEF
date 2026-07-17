@@ -23,11 +23,11 @@
             padding: 2.5rem 1.5rem;
             text-align: center;
             color: #ffffff;
-            background: #003366;
+            background-color: #003366;
         }
 
         header h1 {
-            margin: 0 0 0.6rem 0;
+            margin: 0 0 0.6rem;
             font-size: 2rem;
         }
 
@@ -115,13 +115,22 @@
             border-top: 1px solid #dddddd;
         }
 
+        footer p {
+            margin: 0;
+        }
+
         @media (max-width: 768px) {
+            header {
+                padding: 2rem 1rem;
+            }
+
             header h1 {
                 font-size: 1.6rem;
             }
 
             .main-container {
                 width: 94%;
+                margin-top: 20px;
             }
 
             .project-description,
@@ -150,16 +159,17 @@
 
             <p>
                 Reporte de Business Intelligence diseñado para analizar la
-                concentración, destino, administración y ejecución del gasto.
-                Permite comparar entidades, identificar responsables principales
+                concentración, el destino, la administración y la ejecución del gasto.
+                Permite comparar entidades, identificar a los principales responsables
                 y detectar diferencias en el avance presupuestario.
             </p>
         </section>
 
         <section class="report-wrapper">
             <iframe
-                title="Reporte PEF 2026"
-                src="https://app.powerbi.com/view?r=eyJrIjoiM2I0ODQ1MTctM2M2MS00MDFjLWFjYTUtODQ0YzY0ODVjZjkzIiwidCI6IjVmMjgyOTEwLTE3NmYtNDU5ZC1hYjdkLWI3NDRhYTZlZmMwNyIsImMiOjR9"
+                title="PEF21"
+                src="https://app.powerbi.com/view?r=eyJrIjoiM2I0ODQ1MTctM2M2MS00MDFjLWFjYTUtODQ0YzY0ODVjZjkzIiwidCI6IjVmMjgyOTEwLTE3NmYtNDU5ZC1hYjdkLWI3NDRhYTZlZmMwNyIsImMiOjR9&pageName=9396be8a6b08d1a6c0f3"
+                loading="lazy"
                 allowfullscreen>
             </iframe>
         </section>
@@ -186,7 +196,7 @@
 
                 <li>
                     <strong>¿Quién administra los recursos?</strong>
-                    Muestra los ramos y unidades responsables con mayor participación.
+                    Muestra los ramos y las unidades responsables con mayor participación.
                 </li>
 
                 <li>
@@ -196,7 +206,8 @@
 
                 <li>
                     <strong>¿Dónde existe mayor rezago?</strong>
-                    Facilita detectar entidades y funciones con menor avance presupuestario.
+                    Facilita la detección de entidades y funciones con menor avance
+                    presupuestario.
                 </li>
             </ul>
         </section>
